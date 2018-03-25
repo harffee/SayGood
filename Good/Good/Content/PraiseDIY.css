@@ -1,0 +1,10 @@
+﻿body {
+}
+
+/*DetailList*/
+.DetailList
+{
+    width:960px;
+    height:960px;
+    background-color:yellowgreen;
+}
