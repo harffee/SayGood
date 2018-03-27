@@ -167,3 +167,7 @@ C:\Users\v-jzingh\Source\Repos\SayGood\SayGood\SayGood\obj\Debug\SayGood.csprojR
 C:\Users\v-jzingh\Source\Repos\SayGood\SayGood\SayGood\obj\Debug\SayGood.csproj.CoreCompileInputs.cache
 C:\Users\v-jzingh\Source\Repos\SayGood\SayGood\SayGood\obj\Debug\SayGood.dll
 C:\Users\v-jzingh\Source\Repos\SayGood\SayGood\SayGood\obj\Debug\SayGood.pdb
+D:\Repo\SayGood\SayGood\SayGood\obj\Debug\SayGood.csprojResolveAssemblyReference.cache
+D:\Repo\SayGood\SayGood\SayGood\obj\Debug\SayGood.csproj.CoreCompileInputs.cache
+D:\Repo\SayGood\SayGood\SayGood\obj\Debug\SayGood.dll
+D:\Repo\SayGood\SayGood\SayGood\obj\Debug\SayGood.pdb

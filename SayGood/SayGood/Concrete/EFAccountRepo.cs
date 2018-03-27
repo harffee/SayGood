@@ -1,6 +1,7 @@
 ﻿using SayGood.Abstract;
 using System.Linq;
 using SayGood.Models;
+using System.Web.Mvc;
 
 namespace SayGood.Concrete
 {
@@ -17,7 +18,15 @@ namespace SayGood.Concrete
             get { return context.Accounts; }
         }
 
-        
+        public void SaveAccount(Account account)
+        {
+            if (account.Alias == null)
+                context.Accounts.Add(account);
+            else
+            {
+                TempData["message"] = string.Format("Alias existed!");
+            }
+        }
     }
     
 }

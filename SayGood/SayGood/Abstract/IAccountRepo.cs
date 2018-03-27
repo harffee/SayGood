@@ -11,5 +11,7 @@ namespace SayGood.Abstract
         //如何递交他们，这是存储库模式的本质
         IQueryable<Account> Accounts { get; }
         IQueryable<Detail> Details { get; }
+
+        void SaveAccount(Account account);
     }
 }
