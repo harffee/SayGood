@@ -1,4 +1,4 @@
-﻿using SayGood.Controllers;
+﻿using SayGood.Models;
 using System.Data.Entity;
 
 namespace SayGood.Concrete

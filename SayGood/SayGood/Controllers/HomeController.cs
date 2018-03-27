@@ -4,6 +4,7 @@ using System.Web.Security;
 using System.Web;
 using System;
 using System.Collections.Generic;
+using SayGood.Concrete;
 
 namespace SayGood.Controllers
 {

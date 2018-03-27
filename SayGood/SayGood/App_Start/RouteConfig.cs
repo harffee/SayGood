@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Praise2017
+namespace SayGood
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace Praise2017
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "DetailList", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "StartPage", id = UrlParameter.Optional }
             );
         }
     }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-//using Praise2017.Infrastructure;
+//using SayGood.Infrastructure;
 
-namespace Praise2017
+namespace SayGood
 {
     public class MvcApplication : System.Web.HttpApplication
     {

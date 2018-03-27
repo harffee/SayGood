@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SayGood.Abstract;
 using System.Linq;
-using System.Web;
-using SayGood.Abstract;
-using SayGood.Controllers;
+using SayGood.Models;
 
 namespace SayGood.Concrete
 {
