@@ -24,8 +24,20 @@ namespace SayGood.Concrete
                 context.Accounts.Add(account);
             else
             {
-                TempData["message"] = string.Format("Alias existed!");
+                //TempData["message"] = string.Format("Alias existed!");
             }
+            context.SaveChanges();
+        }
+
+        public Account DeleteUser (string alias)
+        {
+            Account dbEntry = context.Accounts.Find(alias);
+            if(dbEntry!=null)
+            {
+                context.Accounts.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
         }
     }
     

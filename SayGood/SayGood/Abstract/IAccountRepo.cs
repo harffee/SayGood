@@ -13,5 +13,7 @@ namespace SayGood.Abstract
         IQueryable<Detail> Details { get; }
 
         void SaveAccount(Account account);
+
+        Account DeleteUser(string alias);
     }
 }
