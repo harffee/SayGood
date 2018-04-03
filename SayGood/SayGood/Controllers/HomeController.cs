@@ -29,7 +29,7 @@ namespace SayGood.Controllers
         // GET: Admin
         //private EFDbContext db = new EFDbContext();
         //--对应Team页面
-        [ChildActionOnly]
+        
         public ActionResult Admin()
         {
             return PartialView(reposity.Accounts);
