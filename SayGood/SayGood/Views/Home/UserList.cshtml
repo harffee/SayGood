@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+@model IEnumerable<SayGood.Models.Account>
+    @{
+        Layout = null;
+    }
+
+    <html>
+
+    <body>
+
+       
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+
+                                <!-- Project Details Go Here -->
+                                <div class="modal-body">
+                                    <form name="sentMessage" id="contactForm" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Alias" id="alias" required data-validation-required-message="Please enter your email address.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="name">Role</label>
+                                                    <select class="form-control">
+                                                        <option>Admin</option>
+                                                        <option>User</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                <i class="fa fa-times"></i>
+                                Cancel
+                            </button>
+                            <input type="submit" value="Save" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Alias</th>
+                <th>Delete</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Alias</td>
+                    <td>
+                        @using (Html.BeginForm("Delete", "Admin"))
+                        {
+                            <input type="submit" value="Delete" />
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </body>
+
+</html>

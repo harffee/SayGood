@@ -14,6 +14,7 @@ namespace SayGood.Controllers
     public class AdminController : Controller
     {
         private IAccountRepo reposity;
+       
         public AdminController(IAccountRepo repo)
         {
             reposity = repo;
@@ -21,7 +22,8 @@ namespace SayGood.Controllers
         // GET: Admin
         //private EFDbContext db = new EFDbContext();
         //--对应Team页面
-        public PartialViewResult Admin()
+        [ChildActionOnly]
+        public ActionResult Admin()
         {
             return PartialView(reposity.Accounts);
 
