@@ -9,13 +9,9 @@ namespace SayGood.Models
 
     public  class Account
     {
-      
-        public string Name { get; set; }
-
-       
+        private int Id { get; }
         public string Alias { get; set; }
-
-        
+        public string Name { get; set; }
         public string Role { get; set; }
 
         public int Got { get; set; }

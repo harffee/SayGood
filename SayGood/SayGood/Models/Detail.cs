@@ -9,13 +9,13 @@ namespace SayGood.Models
     public  class Detail
     {
 
-        public int Id { get; set; }
+        public int UpdateId { get; set; }
         public string Name { get; set; }
 
-        public DateTime? UpdateDate { get; set; }
+        public DateTime? UpDate { get; set; }
 
        
-        public string Descrip { get; set; }
+        public string Desc { get; set; }
 
         
         public string ToWho { get; set; }
