@@ -9,7 +9,7 @@ namespace SayGood.Models
 
     public  class Account
     {
-        private int Id { get; }
+        public int Id { get; }
         public string Alias { get; set; }
         public string Name { get; set; }
         public string Role { get; set; }

@@ -30,9 +30,12 @@ namespace SayGood.Controllers
         //private EFDbContext db = new EFDbContext();
         //--对应Team页面
         
-        public ActionResult Admin()
+        public ActionResult Admin(Account account)
         {
-            return PartialView(reposity.Accounts);
+           
+            return PartialView(account);
+
+
 
         }
         //仅管理员可见
@@ -42,15 +45,17 @@ namespace SayGood.Controllers
         }
         //弹窗显示用户列表，可以直接删除，新增用户
         [HttpPost]
-        public ActionResult AddUser(Account account)
+        public ActionResult AddUser(string alias,string name,string role)
         {
-            if (ModelState.IsValid)
-            {
-                reposity.SaveAccount(account);
+            Account account = reposity.Accounts.FirstOrDefault(p => p.Alias == alias);
+            if(account==null)
+            reposity.SaveAccount(account);
+            //else提示用户已存在
+            return RedirectToAction("RemovdUser");
                 //add完之后清空表单，刷新下方removeUser List
-            }
+            
 
-            return RedirectToAction("Admin");
+            
         }
         [HttpPost]
         public ActionResult RemoveUser(string alias)
